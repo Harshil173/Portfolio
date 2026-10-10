@@ -7,7 +7,8 @@ export const siteConfig = {
   name: 'Harshil Patadia',
   initials: 'HP',
   title: 'Turning Data & AI into Business Decisions',
-  subtitle: 'MSc Business Analytics | AI & Strategy | Data-Driven Problem Solving',
+  subtitle: 'AI & Strategy | Data-Driven Problem Solving',
+  credentialChip: "Queen's Business School · Queen's University Belfast · MSc Business Analytics, 2026",
   email: 'harshilpatadiya8@gmail.com',
   linkedin: 'https://linkedin.com/in/YOUR-PROFILE', // ← Replace
   github: 'https://github.com/YOUR-PROFILE', // ← Replace
@@ -41,7 +42,7 @@ export interface KpiItem {
 export const kpis: KpiItem[] = [
   { value: 3, suffix: '', label: 'Industry roles across AI, automation & development' },
   { value: 70, suffix: '%', label: 'Client queries resolved without human support' },
-  { value: 15, suffix: ' hrs/wk', prefix: '~', label: 'Saved through business automation' },
+  { value: 15, suffix: ' hrs', prefix: '~', label: 'Saved per week through automation' },
   { value: 500, suffix: '+', label: 'Voice-AI calls handled per month' },
   { value: 49191, suffix: '', label: 'Survey responses clustered for market segmentation' },
 ];

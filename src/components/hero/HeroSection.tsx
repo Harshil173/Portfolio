@@ -11,11 +11,15 @@ export default function HeroSection() {
     <Section id="executive-summary" className="!pt-28 md:!pt-36">
       {/* Eyebrow */}
       <motion.div
+        className="flex items-center flex-wrap gap-3 mb-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
       >
-        <p className="label mb-4">Executive Summary</p>
+        <p className="label m-0">Executive Summary</p>
+        <span className="text-xs font-medium px-2.5 py-1 rounded-full border border-[var(--color-border)] text-[var(--color-text-secondary)] bg-transparent">
+          {siteConfig.credentialChip}
+        </span>
       </motion.div>
 
       {/* Main headline */}
