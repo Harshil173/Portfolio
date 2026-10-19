@@ -1,19 +1,7 @@
-import { useState } from 'react';
 import Section from '../layout/Section';
 import { siteConfig } from '../../data/content';
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({ name: '', problem: '' });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = encodeURIComponent(`Let's talk — ${formData.name}`);
-    const body = encodeURIComponent(
-      `Hi Harshil,\n\n${formData.problem}\n\nBest,\n${formData.name}`
-    );
-    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
-  };
-
   return (
     <Section id="next-steps">
       <div className="max-w-2xl mx-auto text-center">
@@ -27,23 +15,24 @@ export default function ContactSection() {
         </p>
 
         {/* Contact links */}
-        <div className="flex items-center justify-center gap-6 mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
           <a
             href={`mailto:${siteConfig.email}`}
-            className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+            className="btn-primary"
             aria-label="Send email"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
               <polyline points="22,6 12,13 2,6" />
             </svg>
-            Email
+            <span>Email</span>
+            <span className="opacity-75 text-xs">({siteConfig.email})</span>
           </a>
           <a
             href={siteConfig.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+            className="btn-secondary"
             aria-label="LinkedIn profile"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -56,7 +45,7 @@ export default function ContactSection() {
             href={siteConfig.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+            className="btn-secondary"
             aria-label="GitHub profile"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -65,48 +54,6 @@ export default function ContactSection() {
             GitHub
           </a>
         </div>
-
-        {/* Short form */}
-        <form onSubmit={handleSubmit} className="card text-left max-w-lg mx-auto">
-          <p className="text-sm font-medium text-[var(--color-text-primary)] mb-4">
-            What problem are you trying to solve?
-          </p>
-          <div className="space-y-3">
-            <div>
-              <label className="block text-xs font-medium text-[var(--color-text-tertiary)] mb-1" htmlFor="contact-name">
-                Your name
-              </label>
-              <input
-                id="contact-name"
-                type="text"
-                className="input-field"
-                placeholder="Jane Smith"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-xs font-medium text-[var(--color-text-tertiary)] mb-1" htmlFor="contact-problem">
-                Brief description
-              </label>
-              <textarea
-                id="contact-problem"
-                className="input-field !h-24 resize-none"
-                placeholder="We're looking for someone to help with..."
-                value={formData.problem}
-                onChange={(e) => setFormData({ ...formData, problem: e.target.value })}
-                required
-              />
-            </div>
-            <button type="submit" className="btn-primary w-full justify-center">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" />
-              </svg>
-              Send via Email
-            </button>
-          </div>
-        </form>
 
         {/* Footer */}
         <p className="mt-12 text-xs text-[var(--color-text-tertiary)]">

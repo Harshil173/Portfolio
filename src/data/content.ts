@@ -10,8 +10,8 @@ export const siteConfig = {
   subtitle: 'AI & Strategy | Data-Driven Problem Solving',
   credentialChip: "Queen's Business School · Queen's University Belfast · MSc Business Analytics, 2026",
   email: 'harshilpatadiya8@gmail.com',
-  linkedin: 'https://linkedin.com/in/YOUR-PROFILE', // ← Replace
-  github: 'https://github.com/YOUR-PROFILE', // ← Replace
+  linkedin: 'https://www.linkedin.com/in/harshil-patadia-68762b222/',
+  github: 'https://github.com/Harshil173',
   cvUrl: '/Harshil_Patadia_CV.pdf', // ← Place your CV in public/
 };
 
