@@ -22,7 +22,7 @@ export default function HeroSection() {
         </span>
       </motion.div>
 
-      {/* Main headline */}
+
       <motion.h1
         className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-[var(--color-text-primary)] max-w-4xl"
         initial={{ opacity: 0, y: 30 }}
@@ -89,13 +89,13 @@ export default function HeroSection() {
         >
           <p className="label mb-3">The Engagement</p>
           <p className="text-[var(--color-text-secondary)] leading-relaxed max-w-3xl">
-            This site is structured as a consulting engagement. Each section presents findings in the way 
-            a consulting team would: answer first, then evidence. Navigate through case files that demonstrate 
-            structured problem-solving, explore interactive models that show how I think about data, and review 
+            This site is structured as a consulting engagement. Each section presents findings in the way
+            a consulting team would: answer first, then evidence. Navigate through case files that demonstrate
+            structured problem-solving, explore interactive models that show how I think about data, and review
             the operational experience behind each insight. Use the{' '}
-            <span className="font-semibold text-[var(--color-text-primary)]">30s / 5min toggle</span> to control 
+            <span className="font-semibold text-[var(--color-text-primary)]">30s / 5min toggle</span> to control
             the depth of detail, or{' '}
-            <span className="font-semibold text-[var(--color-text-primary)]">← → arrow keys</span> to navigate 
+            <span className="font-semibold text-[var(--color-text-primary)]">← → arrow keys</span> to navigate
             between sections.
           </p>
         </motion.div>
